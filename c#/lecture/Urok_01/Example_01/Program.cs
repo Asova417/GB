@@ -1,1 +1,1 @@
-﻿// Заготовка под конспекты
+﻿Console.WriteLine("2 Hello, World!");
