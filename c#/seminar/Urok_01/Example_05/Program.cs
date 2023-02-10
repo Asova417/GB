@@ -1,9 +1,25 @@
-﻿//Задача №7. Напишите программу, которая принимает на вход трёхзначное число и на выходе показывает последнюю цифру этого числа.
+﻿//Задача №7. Напишите программу, которая принимает 
+//на вход трёхзначное число и на выходе показывает последнюю цифру этого числа.
 //	456 -> 6
 //	782 -> 2
 //	918 -> 8
 
-Console.Write("Введите число: ");
-int numberA = Convert.ToInt32 (Console.ReadLine());
-int numberB = numberA%10;
-Console.Write(numberB);
+//Console.Write("Введите трёхзначное число: ");
+//int numberA = Convert.ToInt32 (Console.ReadLine());
+//int numberB = numberA%10;
+//Console.Write(numberB);
+
+Console.Write("Введите трёхзначное число: ");
+int N = Convert.ToInt32 (Console.ReadLine());
+int LasNumber = 0;
+if (N > 99 && N < 1000)  // При наличии двух обязательных и одноврременных условий используется &&
+                        // || - оператор "или" возможно вариация между двумя условиями, достаточно выполнения одного условия из предложенных
+{
+    LasNumber = N%10;
+    Console.Write(LasNumber);
+}
+
+else
+{
+    Console.Write("Некорректный ввод");
+}
