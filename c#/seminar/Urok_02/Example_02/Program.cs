@@ -7,7 +7,7 @@
 int number = new Random().Next(100, 1000);
 Console.WriteLine ($"Ваше случайное число: {number} ");
 
-int a = number/10;
+int a = number/100;
 int b = number%10;
 
-Console Write.Line ($"{a} {b}");
+Console.WriteLine($"{a}{b}");
