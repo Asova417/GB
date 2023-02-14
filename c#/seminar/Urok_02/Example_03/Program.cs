@@ -11,7 +11,15 @@ int number1 = Convert.ToInt32 (Console.ReadLine());
 Console.Write("Введите число: ");
 int number2 = Convert.ToInt32 (Console.ReadLine());
 
-int a = number1 / number2;
-double b = number1 / number2;
+int mod = number1 % number2;  // % - покажет остаток если цифры поделяться с остатком
+if (mod == 0)
+{
+    Console.Write("кратно");
+}
+else
+{
+    Console.Write($"Не кратно, остаток {mod}");
+}
 
-Console.WriteLine (a, b);
+// в этой задаче села в лужу, поскольку я не  полностью поняла %
+// надо запомнить!!!!!!!
