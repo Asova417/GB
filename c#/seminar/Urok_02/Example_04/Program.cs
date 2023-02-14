@@ -1,9 +1,9 @@
 ﻿//Напишите программу, которая принимает на вход число и проверяет, 
 //кратно ли оно одновременно 7 и 23.
 
-14 -> нет
-46 -> нет
-161 -> да
+//4 -> нет
+//46 -> нет
+//161 -> да
 
 Console.WriteLine("Enter your firstNumber");
 int firstNumber = Convert.ToInt32(Console.ReadLine());
