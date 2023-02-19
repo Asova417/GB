@@ -60,7 +60,7 @@ Console.WriteLine(res);
 int Method4 (int count, string text)
 {
     string result = string.Empty; //пустая строка
-    for (int i = 0; i < count; i++;
+    for (int i = 0; i < count; i++;)
     //     счётчик    условие
     {
         result = result + text;
