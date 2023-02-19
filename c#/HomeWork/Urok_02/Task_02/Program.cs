@@ -41,3 +41,23 @@ int [] array = new int[a];
 
 FillArray (array);
 PrintArray(array);
+if (a > 999)
+{
+    while (a > 999)
+    {
+        a = a/10;
+    }
+    Console.WriteLine (a = a%10);
+}
+
+else if (a < 99)
+{
+    Console.WriteLine("Третьей цифры нет");
+}
+
+else
+{
+    Console.WriteLine(a = a%10);
+}
+
+// Эталонное решение не понятно. Методы не поняты. Требуются дополнительные сведения.
