@@ -1,31 +1,34 @@
-﻿// Задача 32: Напишите программу замена элементов массива: положительные элементы замените на соответствующие отрицательные, и наоборот.
-// [-4, -8, 8, 2] -> [4, 8, -8, -2]
+﻿// Задача 33: Задайте массив. Напишите программу, которая определяет, присутствует ли заданное число в массиве.
+// 4; массив [6, 7, 19, 345, 3] -> нет
+// -3; массив [6, 7, 19, 345, 3] -> да
 
-int[] FillArrayWithRandomNumbers(int length)
+int Entry(string msg)
 {
-int[] arr = new int [length];
-Random rnd = new Random();
-for(int i =0; i < arr.Length; i++)
-{
-arr[i] = rnd.Next(-9, 10);
-}
-return arr;
+    Console.Write(msg);
+    return Convert.ToInt32(Console.ReadLine());
 }
 
-int[] newMassive(int[] array)
+int[] ArrManually(int lenght)
 {
-for(int i = 0; i < array.Length; i++)
-{
-array[i] = -array[i]; // == array[i] = array[i] * -1// == array[i]*= -1
-}
-return array;
+    int[] arr = new int[lenght];
+    for (int i = 0; i < arr.Length; i++)
+    {
+        arr[i] = Entry($"Введите целочисленное значение в элемент {i}: ");
+    }
+    return arr;
 }
 
-System.Console.WriteLine("Введите длину массива: ");
-int length = Convert.ToInt32(Console.ReadLine());
-int[] array = FillArrayWithRandomNumbers(length);
-System.Console.WriteLine($"[{string.Join(", ", array)}]");
-int[] newArray = newMassive(array);
-System.Console.WriteLine($"[{string.Join(", ", newArray)}]");
-
-// Решение от преподавателя
+string ArrSearch(int search, int[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (search == array[i])
+            return $"данное число под индексом {i}: ";
+    }
+    return "К сожалению этого числа нет в данном массиве.";
+}
+int lenght = Entry($"Введите длину массива: ");
+int[] array = ArrManually(lenght);
+Console.WriteLine ($"[{string.Join(", ", array)}]");
+int search = Entry($"Введите искомое число: ");
+Console.WriteLine(ArrSearch(search, array));
