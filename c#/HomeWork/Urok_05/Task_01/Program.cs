@@ -2,6 +2,11 @@
 // [345, 897, 568, 234] -> 2
 
 int n = Step1("Длинна массива: ");
+if (n ==0 || n <0)
+{
+    Console.WriteLine("Длинна массива не может быть меньше или равно нулю.");
+    break;
+}
 int[] Fignya = new int [n];
 Random random = new Random();
 int count = 0;
@@ -9,7 +14,7 @@ int count = 0;
 int Step1(string msg)
 {
     Console.Write(msg);
-    int result = Math.Abs(Convert.ToInt32(Console.ReadLine()));
+    int result = Convert.ToInt32(Console.ReadLine());
     return result;
 }
 

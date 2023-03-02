@@ -11,7 +11,7 @@ int Step1 (string message)
 
 int min = Step1("Введите минимальное значение: ");
 int max = Step1("Введите максимальное значение: ");
-int n = Step1("Длинна массива: ");
+int n = Math.Abs(Step1("Длинна массива: "));
 
 
 
