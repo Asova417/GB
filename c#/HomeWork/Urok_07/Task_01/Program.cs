@@ -16,6 +16,9 @@ int Step1(string msg)
     return result;
 }
 
+int min = Step1 ("Введите минимальное значение массива: ");
+int max = Step1 ("Максимальное значение массива: ");
+
 double[,] FillMatrixWithRandom(int row, int column)
 {
     double[,] matrix = new double[row, column];
@@ -24,7 +27,7 @@ double[,] FillMatrixWithRandom(int row, int column)
     {
         for(int j = 0; j < matrix.GetLength(1); j++)
         {
-            matrix[i,j] = Convert.ToDouble(rnd.Next (-100, 100)/10.0);
+            matrix[i,j] = Convert.ToDouble(rnd.Next (min, max)/10.0);
         }
     }
     return matrix;
