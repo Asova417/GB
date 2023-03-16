@@ -49,4 +49,3 @@ int row = Step1 ("Введите кол-во строк: ");
 int column = Step1("Введите кол-во столбцов: ");
 double[,] matrix = FillMatrixWithRandom(row, column);
 PrintMatrix(matrix);
-
