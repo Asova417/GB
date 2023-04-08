@@ -7,7 +7,7 @@
 int lenght = Convert.ToInt32(Step1 ("Введите длину массива"));
 int value = Convert.ToInt32(Step1 ("Элементы какой длинны необходимо найти?"));
 
-string[] Algorithm(string[] array, int length = 0)
+string[] Algorithm(string[] array, int value, int length = 0)
 {
     string[] arrTemp = new string[length];
     for (int i = 0, j = 0; i < array.Length; i++)
@@ -23,7 +23,7 @@ string[] Algorithm(string[] array, int length = 0)
         }
     }
 
-    if (length > 0 && arrTemp.Length <= 0) return Algorithm(array, length);
+    if (length > 0 && arrTemp.Length <= 0) return Algorithm(array, value, length);
     return arrTemp;
 }
 
@@ -32,10 +32,11 @@ string[] ArrCreatAndFill(int lenght)
     string[] arr = new string[lenght];
     for (int i = 0; i < arr.Length; i++)
     {
-        arr[i] = Step1 ($"Введите значение в элемент  массива: {i}");
+        arr[i] = Step1 ($"Введите любое значение в элемент {i} массива");
     }
     return arr;
 }
 
 string[] arr = ArrCreatAndFill(lenght);
-Console.Write($"[{string.Join(", ", arr)}] -> [{string.Join(", ",TestAlgorithm(arr, value))}]");
+
+Console.Write($"[{string.Join(", ", arr)}] -> [{string.Join(", ",Algorithm(arr, value))}]");
