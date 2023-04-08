@@ -4,9 +4,6 @@
     return Console.ReadLine()?? String.Empty;
 }
 
-int lenght = Convert.ToInt32(Step1 ("Введите длину массива"));
-int value = Convert.ToInt32(Step1 ("Элементы какой длинны необходимо найти?"));
-
 string[] Algorithm(string[] array, int value, int length = 0)
 {
     string[] arrTemp = new string[length];
@@ -38,5 +35,8 @@ string[] ArrCreatAndFill(int lenght)
 }
 
 string[] arr = ArrCreatAndFill(lenght);
+
+int lenght = Convert.ToInt32(Step1 ("Введите длину массива"));
+int value = Convert.ToInt32(Step1 ("Элементы какой длинны необходимо найти?"));
 
 Console.Write($"[{string.Join(", ", arr)}] -> [{string.Join(", ",Algorithm(arr, value))}]");
