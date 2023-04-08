@@ -32,7 +32,7 @@ string[] ArrCreatAndFill(int lenght)
     string[] arr = new string[lenght];
     for (int i = 0; i < arr.Length; i++)
     {
-        arr[i] = Step1 ($"Введите любое значение в элемент {i} массива");
+        arr[i] = Step1 ($"Введите любое значение в элемент массива: {i}");
     }
     return arr;
 }
