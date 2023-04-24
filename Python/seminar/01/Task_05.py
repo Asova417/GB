@@ -15,7 +15,7 @@ flag = True
 while flag:
     if j == 1:
         flag = False
-        print(i)
+        print('Предположительно', i, 'вагонов.')
     elif j > 1:
         j = j - 1
         flag = True
